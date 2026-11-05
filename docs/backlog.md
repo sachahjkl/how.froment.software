@@ -15,6 +15,7 @@ Every task has a number, `HOW-n`, never reused. The commit that does the work ca
 | HOW-12 | The captain, competence, no comparison; duplicated sentences removed | done 2026-11-05 |
 | HOW-13 | Round 14: coordinator, scale, signature, sources on agile, cost, threat model, pruning, order of adoption | done 2026-11-05 |
 | HOW-14 | Diagrams drawn once as SVG, no Mermaid in the browser | done 2026-11-05 |
+| HOW-15 | /latest: a stable address for the newest edition | done 2026-11-05 |
 | HOW-8 | Check every source link again before each edition (a script) | open |
 | HOW-9 | Reproducibility and traceability: two sections, English and French, with their sources | done 2026-11-05 |
 | HOW-10 | The author validates the reproducibility and traceability sections (what a company must do, what open source may skip) | open |

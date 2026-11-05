@@ -6,6 +6,9 @@ All notable changes to this text and its site are written here. The format follo
 
 ## [Unreleased]
 
+### Added
+- `/latest`: a stable address for the newest edition.
+
 ## [2026-11-05]
 
 ### Added

@@ -25,7 +25,8 @@ git tag -a 2026-11-05 -m "Edition 2026-11-05"
 2. copies both pages to `src/site/archive/<date>/` (English) and `src/site/archive/<date>/fr/` (French),
    rewriting their paths so the copy still finds the style, the diagrams and its other language, and
    replacing the edition line with an "archived edition" line;
-3. writes `src/site/archive/index.html` again, from the folders that exist.
+3. writes `src/site/archive/index.html` again, from the folders that exist;
+4. points `/latest` at the new edition.
 
 It refuses a date that already exists.
 

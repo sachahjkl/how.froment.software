@@ -111,5 +111,20 @@ ${rows}
 </body>
 </html>
 `);
+// latest/: a stable address for the newest edition (GitHub Pages has no server redirects)
+mkdirSync(join(root, "latest"), { recursive: true });
+writeFileSync(join(root, "latest", "index.html"), `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>how. Latest edition</title>
+<meta http-equiv="refresh" content="0; url=../archive/${dates[0]}/">
+<link rel="canonical" href="https://how.froment.software/archive/${dates[0]}/">
+</head>
+<body>
+<p><a href="../archive/${dates[0]}/">Edition ${dates[0]}</a></p>
+</body>
+</html>
+`);
 console.log("wrote  archive/index.html (" + dates.length + " edition" + (dates.length === 1 ? "" : "s") + ")");
 console.log("\nNext:  git add -A && git commit -m \"feat(edition): " + date + " (HOW-n)\" && git tag -a " + date + " -m \"Edition " + date + "\"");

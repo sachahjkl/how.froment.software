@@ -4,7 +4,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
-import { cpSync, existsSync, mkdtempSync, readFileSync, rmSync, statSync } from "node:fs";
+import { cpSync, existsSync, mkdtempSync, readFileSync, readdirSync, rmSync, statSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import { spawnSync } from "node:child_process";
@@ -96,6 +96,11 @@ test("the TL;DR has one line per position, in order", () => {
     assert.deepEqual(targets, sectionIds(html).filter((id) => id !== "agile"), page);
     assert.match(html, /href="#tldr"/, `${page} links to it`);
   }
+});
+
+test("latest/ leads to the newest edition", () => {
+  const dates = readdirSync(join(site, "archive")).filter((n) => /^\d{4}-\d{2}-\d{2}$/.test(n)).sort();
+  assert.match(read(site, "latest/index.html"), new RegExp(`url=\\.\\./archive/${dates.at(-1)}/`));
 });
 
 test("nothing is loaded from another site", () => {
