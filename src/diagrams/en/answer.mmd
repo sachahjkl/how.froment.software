@@ -1,0 +1,8 @@
+flowchart TD
+  A["A measure degrades after a release"] --> B["The author answers:<br/>understands and fixes their change"]
+  A --> C["A task in the backlog,<br/>with its number"]
+  B --> D["Post-mortem, committed<br/>in the repository"]
+  C --> D
+  D --> E["A test · a gate · an alert · a better measure"]
+  classDef y fill:#29c659,stroke:#29c659,color:#000
+  class A y

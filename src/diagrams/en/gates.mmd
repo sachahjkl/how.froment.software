@@ -1,0 +1,10 @@
+flowchart TD
+  A["Change: Conventional Commit + task number"] --> B["AI review: instant, advisory"]
+  B --> C{"A human decides"}
+  C -->|merge| D["CI gates"]
+  D -->|pass| E["Deploy"]
+  D -->|refuse| A
+  D -. emergency .-> F["Written override:<br/>who · why · task number · catch-up task"]
+  F -.-> E
+  classDef y fill:#29c659,stroke:#29c659,color:#000
+  class D y

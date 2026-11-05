@@ -1,0 +1,12 @@
+flowchart TD
+  A["Tag : un commit"] --> B["Construire deux fois, dans des environnements propres"]
+  B --> C{"Mêmes octets ?"}
+  C -->|non| X["Refuser la livraison"]
+  C -->|oui| D["Livraison"]
+  D --> E["Application"]
+  D --> F["Changelog"]
+  D --> G["SBOM"]
+  D --> H["Provenance"]
+  D --> I["Signature"]
+  classDef y fill:#29c659,stroke:#29c659,color:#000
+  class C y

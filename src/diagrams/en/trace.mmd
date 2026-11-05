@@ -1,0 +1,12 @@
+flowchart TD
+  A["Tag: one commit"] --> B["Build twice, in clean environments"]
+  B --> C{"Same bytes?"}
+  C -->|no| X["Refuse the release"]
+  C -->|yes| D["Release"]
+  D --> E["Application"]
+  D --> F["Changelog"]
+  D --> G["SBOM"]
+  D --> H["Provenance"]
+  D --> I["Signature"]
+  classDef y fill:#29c659,stroke:#29c659,color:#000
+  class C y

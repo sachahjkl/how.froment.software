@@ -1,0 +1,9 @@
+flowchart TD
+  A["1. Traceability: task numbers, commit format, changelog, tags"] --> B["2. One command, CI on every change"]
+  B --> C["3. Tests, then gates"]
+  C --> D["4. Numbers on a graph, objectives"]
+  D --> E["5. Small changes, frequent deployments, rollback"]
+  E --> F["6. Reproducible builds, SBOM, signature, threat model"]
+  F --> G["7. Draw the teams again"]
+  classDef y fill:#29c659,stroke:#29c659,color:#000
+  class A y

@@ -1,0 +1,8 @@
+flowchart TD
+  A["Une mesure se dégrade après une livraison"] --> B["L'auteur répond :<br/>comprend et corrige son changement"]
+  A --> C["Une tâche au backlog,<br/>avec son numéro"]
+  B --> D["Post-mortem, commité<br/>dans le dépôt"]
+  C --> D
+  D --> E["Un test · une barrière · une alerte · une meilleure mesure"]
+  classDef y fill:#29c659,stroke:#29c659,color:#000
+  class A y

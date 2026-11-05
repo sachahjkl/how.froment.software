@@ -1,0 +1,10 @@
+flowchart TD
+  A["Changement : Conventional Commit + numéro de tâche"] --> B["Relecture IA : instantanée, consultative"]
+  B --> C{"Un humain décide"}
+  C -->|fusion| D["Barrières de la CI"]
+  D -->|passe| E["Déploiement"]
+  D -->|refus| A
+  D -. urgence .-> F["Dérogation écrite :<br/>qui · pourquoi · numéro de tâche · tâche de rattrapage"]
+  F -.-> E
+  classDef y fill:#29c659,stroke:#29c659,color:#000
+  class D y

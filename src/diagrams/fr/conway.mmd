@@ -1,0 +1,9 @@
+flowchart TD
+  A["Dessiner les équipes"] --> B["Le système prend leur forme"]
+  B --> C["Lire ce que ça rendra impossible"]
+  C --> D{"En aura-t-on besoin ?"}
+  D -->|oui| E["Dessiner les équipes autrement"]
+  D -->|non| F["On y va"]
+  E --> A
+  classDef y fill:#29c659,stroke:#29c659,color:#000
+  class D y
