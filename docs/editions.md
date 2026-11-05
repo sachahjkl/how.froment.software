@@ -21,14 +21,17 @@ git tag -a 2026-11-05 -m "Edition 2026-11-05"
 
 `tools/archive.mjs`:
 
-1. writes the date in the edition line of the two current pages;
+1. writes the date in the edition line and the metadata of the two current pages;
 2. copies both pages to `src/site/archive/<date>/` (English) and `src/site/archive/<date>/fr/` (French),
-   rewriting their paths so the copy still finds the style, the diagrams and its other language, and
-   replacing the edition line with an "archived edition" line;
-3. writes `src/site/archive/index.html` again, from the folders that exist;
+   rewriting their paths so the copy still finds the style, the diagrams and its other language, giving the
+   copy its own address in the metadata, and replacing the edition line with an "archived edition" line;
+3. writes `src/site/archive/index.html`, `feed.xml` and `sitemap.xml` again, from the folders that exist;
 4. points `/latest` at the new edition.
 
-It refuses a date that already exists.
+It refuses a date that already exists. `node tools/archive.mjs --refresh` writes step 3 and 4 again without
+publishing anything.
+
+`.well-known/security.txt` expires after a year: move its date before it does. `node --test` fails once it has.
 
 ## Two copies of the history
 

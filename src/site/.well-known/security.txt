@@ -1,0 +1,5 @@
+Contact: https://github.com/sachahjkl/how.froment.software/security/advisories/new
+Expires: 2027-11-05T00:00:00Z
+Preferred-Languages: en, fr
+Canonical: https://how.froment.software/.well-known/security.txt
+Policy: https://github.com/sachahjkl/how.froment.software/blob/master/SECURITY.md

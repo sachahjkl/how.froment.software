@@ -11,6 +11,9 @@ All notable changes to this text and its site are written here. The format follo
 - `LICENSE`: the text and the diagrams are under CC BY 4.0, and the footer says so.
 - `SECURITY.md` and `THREAT_MODEL.md`.
 - Who designs it works on it (Goedecke, Bell), and developers are not spare parts (Naur).
+- Sharing and integration: Open Graph, Twitter cards and a card image per language, canonical and language
+  alternates, structured data, icons, a web manifest, an Atom feed of the editions, a sitemap, `robots.txt`,
+  `llms.txt`, `.well-known/security.txt`, a 404 page and a skip link.
 
 ### Changed
 - The text is for teams of ten to thirty people.

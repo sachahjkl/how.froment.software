@@ -24,6 +24,8 @@ html { -webkit-text-size-adjust: 100%; scroll-padding-top: 1rem; }
 body { margin: 0; background: var(--bg); color: var(--w); font: 400 1.0625rem/1.6 var(--sans); }
 ::selection { background: var(--y); color: #000; }
 :focus-visible { outline: 2px solid var(--y); outline-offset: 2px; }
+.skip { position: absolute; left: 0.5rem; top: -4rem; z-index: 10; padding: 0.5rem 0.75rem; background: var(--y); color: #000; }
+.skip:focus { top: 0.5rem; }
 
 a { color: inherit; text-decoration: underline; text-decoration-color: var(--y); text-underline-offset: 0.18em; }
 a:hover { color: var(--y); }

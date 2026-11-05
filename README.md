@@ -18,13 +18,13 @@ src/md/            the intent: why the text says what it says
 src/diagrams/      the sources of the diagrams, in Mermaid
 docs/              how editions work, the sources, the backlog
 tests/             checks on the pages and on the archive script
-tools/             the scripts that draw the diagrams and publish an edition
+tools/             the scripts that draw the diagrams and the images, and publish an edition
 ```
 
 ## Run it
 
 The site is plain HTML and CSS. Open `src/site/index.html`, or serve the folder with any static server.
-IBM Plex (OFL) is bundled in `src/site/fonts/`. The diagrams are SVG in the pages, drawn from `src/diagrams/` by `node tools/diagrams.mjs` (Mermaid, MIT, in `tools/vendor/`; needs a local Chromium).
+IBM Plex (OFL) is bundled in `src/site/fonts/`. The diagrams are SVG in the pages, drawn from `src/diagrams/` by `node tools/diagrams.mjs` (Mermaid, MIT, in `tools/vendor/`; needs a local Chromium). The sharing cards and the icons are drawn by `node tools/social.mjs`.
 
 ## Test it
 

@@ -1,0 +1,18 @@
+# how.
+
+> How to make software, by Sacha Froment. People answer. The repository is the truth. Measurements judge.
+
+Twenty-five positions on collaborative, iterative development, in English and French, each with its sources.
+The text and the diagrams are under CC BY 4.0.
+
+## Text
+
+- [How to make software](https://how.froment.software/): the current text, in English.
+- [Comment faire du logiciel](https://how.froment.software/fr/): the current text, in French.
+- [Editions](https://how.froment.software/archive/): every dated edition.
+- [Atom feed](https://how.froment.software/feed.xml): new editions.
+
+## Project
+
+- [Source](https://github.com/sachahjkl/how.froment.software): the repository of the text and the site.
+- [Froment Software](https://froment.software): the author's company.

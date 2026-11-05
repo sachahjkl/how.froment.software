@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://how.froment.software/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://how.froment.software/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://how.froment.software/fr/"/>
+  </url>
+  <url>
+    <loc>https://how.froment.software/fr/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://how.froment.software/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://how.froment.software/fr/"/>
+  </url>
+  <url>
+    <loc>https://how.froment.software/archive/</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://how.froment.software/archive/2026-11-05/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://how.froment.software/archive/2026-11-05/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://how.froment.software/archive/2026-11-05/fr/"/>
+  </url>
+  <url>
+    <loc>https://how.froment.software/archive/2026-11-05/fr/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://how.froment.software/archive/2026-11-05/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://how.froment.software/archive/2026-11-05/fr/"/>
+  </url>
+</urlset>

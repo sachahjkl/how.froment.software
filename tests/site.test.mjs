@@ -111,6 +111,42 @@ test("nothing is loaded from another site", () => {
   }
 });
 
+const meta = (html, name) => html.match(new RegExp(`<meta (?:property|name)="${name}" content="([^"]*)"`))?.[1];
+const SITE = "https://how.froment.software/";
+
+test("every page says what it is when it is shared", () => {
+  for (const [page, address, card] of [["index.html", SITE, "social-card-en.png"], ["fr/index.html", SITE + "fr/", "social-card-fr.png"]]) {
+    const html = read(site, page);
+    assert.match(html, new RegExp(`<link rel="canonical" href="${address}">`), page);
+    assert.equal(meta(html, "og:url"), address, page);
+    assert.equal(meta(html, "og:image"), SITE + card, page);
+    assert.equal(meta(html, "twitter:card"), "summary_large_image", page);
+    for (const name of ["og:title", "og:description", "og:image:alt", "twitter:title", "twitter:description", "twitter:image"]) {
+      assert.ok(meta(html, name), `${page}: ${name}`);
+    }
+    assert.ok(existsSync(join(site, card)), card);
+    const data = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
+    assert.equal(data.url, address, page);
+    for (const lang of ["en", "fr", "x-default"]) { assert.match(html, new RegExp(`hreflang="${lang}" href="https:`), page); }
+  }
+});
+
+test("the files around the pages exist and agree", () => {
+  for (const file of ["404.html", "robots.txt", "llms.txt", "favicon.ico", "apple-touch-icon.png", "icon-192.png", "icon-512.png", ".well-known/security.txt"]) {
+    assert.ok(existsSync(join(site, file)), file);
+  }
+  for (const icon of JSON.parse(read(site, "site.webmanifest")).icons) { assert.ok(existsSync(join(site, icon.src)), icon.src); }
+  const dates = readdirSync(join(site, "archive")).filter((n) => /^\d{4}-\d{2}-\d{2}$/.test(n));
+  const sitemap = read(site, "sitemap.xml");
+  const feed = read(site, "feed.xml");
+  for (const d of dates) {
+    assert.ok(sitemap.includes(`<loc>${SITE}archive/${d}/fr/</loc>`), `sitemap: ${d}`);
+    assert.ok(feed.includes(`<id>${SITE}archive/${d}/</id>`), `feed: ${d}`);
+  }
+  const expires = read(site, ".well-known/security.txt").match(/^Expires: (.+)$/m)[1];
+  assert.ok(new Date(expires) > new Date(), "security.txt has not expired");
+});
+
 test("publishing an edition keeps both pages, dated, and refuses the same date twice", () => {
   const dir = mkdtempSync(join(tmpdir(), "how-edition-"));
   try {
@@ -125,8 +161,14 @@ test("publishing an edition keeps both pages, dated, and refuses the same date t
       assert.deepEqual(missingFiles(dir, copy), [], copy + " still finds its files");
       assert.match(read(dir, copy), /class="edition archived"/, copy + " says it is archived");
       assert.match(read(dir, page), /<time datetime="2099-01-02">/, page + " shows the edition");
+      assert.equal(meta(read(dir, page), "article:modified_time"), "2099-01-02", page + " is dated");
+      const own = SITE + "archive/2099-01-02/" + page.replace("index.html", "");
+      assert.equal(meta(read(dir, copy), "og:url"), own, copy + " has its own address");
+      assert.match(read(dir, copy), new RegExp(`<link rel="canonical" href="${own}">`), copy);
     }
     assert.match(read(dir, "archive/index.html"), /2099-01-02/);
+    assert.ok(read(dir, "feed.xml").includes("archive/2099-01-02/"), "the feed has the edition");
+    assert.ok(read(dir, "sitemap.xml").includes("archive/2099-01-02/fr/"), "the sitemap has the edition");
 
     const again = run("2099-01-02");
     assert.equal(again.status, 1, "the same date is refused");

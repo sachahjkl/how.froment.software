@@ -23,3 +23,4 @@ Every task has a number, `HOW-n`, never reused. The commit that does the work ca
 | HOW-17 | `SECURITY.md` and `THREAT_MODEL.md` | done 2026-11-05 |
 | HOW-18 | Who designs it works on it; developers are not spare parts | done 2026-11-05 |
 | HOW-19 | Order of the Sinking Star and Jai in place of The Witness | done 2026-11-05 |
+| HOW-20 | Sharing and web integration: Open Graph, icons, manifest, feed, sitemap, robots, security.txt, 404 | done 2026-11-05 |
