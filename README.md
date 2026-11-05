@@ -10,6 +10,9 @@ README.md          this file
 CONTRIBUTING.md    how to change it
 CHANGELOG.md       what changed, edition by edition
 CODEOWNERS         who to ask
+LICENSE            what you may do with the text
+SECURITY.md        how to report a flaw
+THREAT_MODEL.md    what is defended, and against what
 src/site/          the published site: the pages (EN, FR), their style, the dated archive
 src/md/            the intent: why the text says what it says
 src/diagrams/      the sources of the diagrams, in Mermaid
@@ -38,3 +41,8 @@ node tools/archive.mjs YYYY-MM-DD
 ```
 
 See [docs/editions.md](docs/editions.md).
+
+## Licence
+
+The text and the diagrams are under [CC BY 4.0](LICENSE): copy, translate and change them, and credit Sacha Froment.
+IBM Plex keeps the OFL and Mermaid keeps the MIT licence.
