@@ -115,7 +115,7 @@ const meta = (html, name) => html.match(new RegExp(`<meta (?:property|name)="${n
 const SITE = "https://how.froment.software/";
 
 test("every page says what it is when it is shared", () => {
-  for (const [page, address, card] of [["index.html", SITE, "social-card-en.png"], ["fr/index.html", SITE + "fr/", "social-card-fr.png"]]) {
+  for (const [page, address, card] of [["index.html", SITE, "card-en.png"], ["fr/index.html", SITE + "fr/", "card-fr.png"]]) {
     const html = read(site, page);
     assert.match(html, new RegExp(`<link rel="canonical" href="${address}">`), page);
     assert.equal(meta(html, "og:url"), address, page);

@@ -120,7 +120,7 @@ writeFileSync(join(root, "archive", "index.html"), `<!doctype html>
 <meta property="og:title" content="how. Editions">
 <meta property="og:description" content="Every edition of How to make software, with its date.">
 <meta property="og:url" content="${SITE}archive/">
-<meta property="og:image" content="${SITE}social-card-en.png">
+<meta property="og:image" content="${SITE}card-en.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">

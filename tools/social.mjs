@@ -1,6 +1,6 @@
 // Draws the images the site is shared and installed with: node tools/social.mjs
 //
-// Writes, in src/site: social-card-en.png and social-card-fr.png (1200x630), apple-touch-icon.png (180),
+// Writes, in src/site: card-en.png and card-fr.png (1200x630), apple-touch-icon.png (180),
 // icon-192.png, icon-512.png and favicon.ico (32), from favicon.svg and the bundled fonts, in a local Chromium
 // (CHROME, or Edge or Chrome where they usually are). The site needs none of this at run time.
 
@@ -25,25 +25,19 @@ const url = (p) => pathToFileURL(p).href;
 const font = (name) => url(join(site, "fonts", name));
 
 const CARDS = {
-  en: { title: "How to make software", lines: ["People <b>answer</b>.", "The repository is the <b>truth</b>.", "Measurements <b>judge</b>."] },
-  fr: { title: "Comment faire du logiciel", lines: ["Les gens <b>répondent</b>.", "Le dépôt <b>fait foi</b>.", "Les mesures <b>jugent</b>."] },
+  en: { title: "How to make software" },
+  fr: { title: "Comment faire du logiciel" },
 };
 
-const card = ({ title, lines }) => `<!doctype html><meta charset="utf-8"><style>
+const card = ({ title }) => `<!doctype html><meta charset="utf-8"><style>
 @font-face { font-family: "Mono"; src: url("${font("ibm-plex-mono-700.woff2")}"); font-weight: 700; }
 @font-face { font-family: "Sans"; src: url("${font("ibm-plex-sans-400.woff2")}"); font-weight: 400; }
-@font-face { font-family: "Sans"; src: url("${font("ibm-plex-sans-600.woff2")}"); font-weight: 600; }
 html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; background: #111; color: #f2f2f2; }
-main { box-sizing: border-box; width: 1200px; height: 630px; padding: 64px 72px; border-left: 16px solid #29c659;
-  display: flex; flex-direction: column; font-family: "Sans", sans-serif; }
-.mark { font: 700 44px "Mono", monospace; }
-.mark span { color: #29c659; }
-h1 { margin: auto 0 28px; font-size: 84px; line-height: 1.05; font-weight: 600; letter-spacing: -0.02em; }
-p { margin: 0; font-size: 36px; line-height: 1.35; color: #c8c8c8; }
-b { color: #29c659; font-weight: 600; }
-.url { margin-top: auto; font: 700 26px "Mono", monospace; color: #8a8a8a; }
-</style><main><div class="mark">how<span>.</span></div><h1>${title}</h1>
-${lines.map((l) => `<p>${l}</p>`).join("")}<div class="url">how.froment.software</div></main>`;
+main { box-sizing: border-box; width: 1200px; height: 630px; padding: 0 80px 72px; display: flex; flex-direction: column; justify-content: flex-end; }
+.mark { font: 700 340px/1 "Mono", monospace; letter-spacing: -0.06em; margin-left: -14px; }
+.mark span { color: #29c659; margin-left: -0.12em; }
+p { margin: 28px 0 0; font: 400 46px/1.2 "Sans", sans-serif; color: #a3a3a3; }
+</style><main><div class="mark">how<span>.</span></div><p>${title}</p></main>`;
 
 const icon = (svg) => `<!doctype html><meta charset="utf-8"><style>html, body { margin: 0; background: #29c659; overflow: hidden; }
 svg { display: block; width: 100vw; height: 100vh; }</style>${svg}`;
@@ -83,8 +77,8 @@ function ico(png, size) {
 }
 
 for (const [lang, text] of Object.entries(CARDS)) {
-  writeFileSync(join(site, `social-card-${lang}.png`), shot(card(text), 1200, 630));
-  console.log(`social-card-${lang}.png`);
+  writeFileSync(join(site, `card-${lang}.png`), shot(card(text), 1200, 630));
+  console.log(`card-${lang}.png`);
 }
 const svg = readFileSync(join(site, "favicon.svg"), "utf8");
 for (const [file, size] of [["apple-touch-icon.png", 180], ["icon-192.png", 192], ["icon-512.png", 512]]) {
