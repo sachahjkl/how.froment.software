@@ -19,7 +19,7 @@ Check a link again before you publish an edition that relies on it.
 | [How SQLite Is Tested](https://www.sqlite.org/testing.html) | 590 times as much test code |
 | [Linux development process](https://docs.kernel.org/process/2.Process.html) | A major release every two or three months |
 | [Shape Up](https://basecamp.com/shapeup/2.1-chapter-07) | Six-week cycles, no backlogs; Basecamp grew to over fifty people |
-| [The Witness](https://en.wikipedia.org/wiki/The_Witness_(2016_video_game)) | About eight full-time people by 2015 |
+| [Takahashi, How Thekla created Order of the Sinking Star](https://gamesbeat.com/how-thekla-created-order-of-the-sinking-star-with-1500-puzzles-jonathan-blow-exclusive-intervie) | Blow, October 2026: "We not only made the game with four programmers, we made the engine and the programming language", with more for brief periods; about 10 or 11 people in all. Jai is still in closed beta |
 | [OpenCode](https://github.com/anomalyco/opencode) | 22,173 commits on 2026-11-05 |
 | [Graham, Maker's Schedule](https://www.paulgraham.com/makersschedule.html) | One meeting can blow a whole afternoon |
 | [Threat Modeling Manifesto](https://www.threatmodelingmanifesto.org/), [OWASP cheat sheet](https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html), [STRIDE](https://en.wikipedia.org/wiki/STRIDE_model), [ASVS](https://github.com/OWASP/ASVS), [NIST SSDF](https://csrc.nist.gov/projects/ssdf), [Least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege) | Security beyond dependencies |

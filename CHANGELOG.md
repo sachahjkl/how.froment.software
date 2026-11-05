@@ -14,6 +14,7 @@ All notable changes to this text and its site are written here. The format follo
 
 ### Changed
 - The text is for teams of ten to thirty people.
+- The opening cites Order of the Sinking Star and Jai in place of The Witness.
 
 ## [2026-11-05]
 
