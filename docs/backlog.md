@@ -21,3 +21,4 @@ Every task has a number, `HOW-n`, never reused. The commit that does the work ca
 | HOW-10 | The author validates the reproducibility and traceability sections (what a company must do, what open source may skip) | done 2026-11-05 |
 | HOW-16 | Say the scale in numbers: teams of ten to thirty people | done 2026-11-05 |
 | HOW-17 | `SECURITY.md` and `THREAT_MODEL.md` | done 2026-11-05 |
+| HOW-18 | Who designs it works on it; developers are not spare parts | done 2026-11-05 |

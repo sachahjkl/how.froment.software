@@ -10,6 +10,9 @@ Check a link again before you publish an edition that relies on it.
 | [The Scrum Guide](https://scrumguides.org/scrum-guide.html) | The Scrum Master, the Daily Scrum, the Sprint Retrospective |
 | [Scrum Alliance, Certified ScrumMaster](https://www.scrumalliance.org/get-certified/scrum-master-track/certified-scrummaster) | The course is 16 hours of training |
 | [Reference class forecasting](https://en.wikipedia.org/wiki/Reference_class_forecasting) | Predicting from similar past situations |
+| [Goedecke, You can't design software you don't work on](https://www.seangoedecke.com/you-cant-design-software-you-dont-work-on/) | Design comes from the people in the code; generic advice breaks ties; whoever designs answers for the result. It is about architects and generic design, not about agile |
+| [Bell, Don't Feed the Thought Leaders](https://earthly.dev/blog/thought-leaders/) | Good advice depends on the problem at hand |
+| [Naur, Programming as Theory Building](https://pages.cs.wisc.edu/~remzi/Naur.pdf) | 1985: the theory lives in the programmers; "the notion of the programmer as an easily replaceable component in the program production activity has to be abandoned"; "the death of a program happens when the programmer team possessing its theory is dissolved" |
 | [Thomas, Time to Kill Agile](https://pragdave.me/thoughts/active/2014-03-04-time-to-kill-agile.html) | 2014: the word "subverted to the point where it is effectively meaningless" |
 | [Jeffries, Developers Should Abandon Agile](https://ronjeffries.com/articles/018-01ff/abandon-1), [Story Points Revisited](https://ronjeffries.com/articles/019-01ff/story-points/Index.html) | 2018, 2019; he also writes "probably a little sorry now, but not very sorry" |
 | [Fowler, The State of Agile Software in 2018](https://martinfowler.com/articles/agile-aus-2018.html) | The Agile Industrial Complex |

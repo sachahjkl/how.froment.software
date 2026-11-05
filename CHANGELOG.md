@@ -10,6 +10,7 @@ All notable changes to this text and its site are written here. The format follo
 - `/latest`: a stable address for the newest edition.
 - `LICENSE`: the text and the diagrams are under CC BY 4.0, and the footer says so.
 - `SECURITY.md` and `THREAT_MODEL.md`.
+- Who designs it works on it (Goedecke, Bell), and developers are not spare parts (Naur).
 
 ### Changed
 - The text is for teams of ten to thirty people.
